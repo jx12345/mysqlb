@@ -3,16 +3,10 @@ import os
 import time
 import MySQLdb
 import sqlite3
+import json
 
-dbs = list()
-dbs.append({
-  'name'    : '', 
-  'rhost'   : '',
-  'ruser'   : '',
-  'rpwd'    : '',
-  'rdb'   : '',
-  'backup_path' : '',
-})
+f = open('hosts.json')
+dbs = json.load(f)
 
 lhost = 'localhost'
 luser = 'root'
